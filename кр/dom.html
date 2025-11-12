@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>DOM, JS. Считываем информацию из DOM</title>
+</head>
+<body>
+
+    <nav id="movies-navbar">
+        <a href="index.html">Главная</a>
+        <a href="forms.html">Формы</a>
+        <a href="dom.html" class="active">DOM</a>
+        <a href="change.html">Изменение</a>
+        <a href="task.html">Задача</a>
+      </nav>
+
+  <h1>Паспорт гражданина</h1>
+
+  <section id="passport">
+    <p><strong>Фамилия:</strong> Елканова </p>
+    <p><strong>Имя:</strong> Лаура</p>
+    <p><strong>Отчество:</strong> Алановна</p>
+    <p><strong>Дата рождения:</strong> 28.07.2008</p>
+    <p><strong>Номер паспорта:</strong> 1234 567890</p>
+    <p><strong>Дата выдачи паспорта:</strong> 31.10.2022</p>
+    <p><strong>Код подразделения:</strong> 150-001</p>
+    <p><strong>Место рождения:</strong> г.Владикавказ</p>
+  </section>
+
+  <button onclick="getPassportData()">Считать данные из DOM</button>
+
+  <p id="result" style="margin-top:20px; font-weight:bold;"></p>
+
+  <script>
+    function getPassportData() {
+      const ps = document.getElementsByTagName('p');
+
+      const surname = ps[0].textContent.replace("Фамилия:", "").trim();
+      const name = ps[1].textContent.replace("Имя:", "").trim();
+      const year = ps[3].textContent.replace("Дата рождения:", "").trim();
+
+      const passportData = { surname, name, year };
+
+      console.log(passportData);
+
+    
+    }
+
+  </script>
+
+<img src="screen.png" alt="screen" width="600">
+</body>
+</html>

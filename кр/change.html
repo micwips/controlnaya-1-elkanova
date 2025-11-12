@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Изменяем кириллицу на латиницу по клику</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav id="movies-navbar">
+    <a href="index.html">Главная</a>
+    <a href="forms.html">Формы</a>
+    <a href="dom.html">DOM</a>
+    <a href="change.html" class="active">Изменение</a>
+    <a href="task.html">Задача</a>
+  </nav>
+
+  <main>
+    <h1>Изменяем кириллицу на латиницу по клику</h1>
+
+    <section class="passport">
+      <h2>Паспорт гражданина</h2>
+      <p id="surname"><strong>Фамилия:</strong> Елканова</p>
+      <p id="name"><strong>Имя:</strong> Лаура</p>
+      <p id="fname"><strong>Отчество:</strong> Алановна</p>
+      <p id="year"><strong>Год рождения:</strong> 2008</p>
+      <p id="place"><strong>Место рождения:</strong> Владикавказ</p>
+    </section>
+
+    <button id="toggleBtn">Изменить на латиницу</button>
+  </main>
+
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+
+    // Сохраняем оригинальный текст
+    const originalText = {
+      surname: document.getElementById('surname').innerHTML,
+      name: document.getElementById('name').innerHTML,
+      fname: document.getElementById('fname').innerHTML,
+      year: document.getElementById('year').innerHTML,
+      place: document.getElementById('place').innerHTML
+    };
+
+    // Латиница
+    const latinText = {
+      surname: "<strong>Фамилия:</strong> Elkanova",
+      name: "<strong>Имя:</strong> Laura",
+      fname: "<strong>Отчество:</strong> Alanovna",
+      year: "<strong>Год рождения:</strong> 2008",
+      place: "<strong>Место рождения:</strong> Vladikavkaz"
+    };
+
+    let isLatin = false; // текущий статус
+
+    toggleBtn.addEventListener('click', () => {
+      if (!isLatin) {
+        document.getElementById('surname').innerHTML = latinText.surname;
+        document.getElementById('name').innerHTML = latinText.name;
+        document.getElementById('fname').innerHTML = latinText.fname;
+        document.getElementById('year').innerHTML = latinText.year;
+        document.getElementById('place').innerHTML = latinText.place;
+        toggleBtn.textContent = "Изменить на кириллицу";
+        isLatin = true;
+      } else {
+        document.getElementById('surname').innerHTML = originalText.surname;
+        document.getElementById('name').innerHTML = originalText.name;
+        document.getElementById('fname').innerHTML = originalText.fname;
+        document.getElementById('year').innerHTML = originalText.year;
+        document.getElementById('place').innerHTML = originalText.place;
+        toggleBtn.textContent = "Изменить на латиницу";
+        isLatin = false;
+      }
+    });
+  </script>
+</body>
+</html>

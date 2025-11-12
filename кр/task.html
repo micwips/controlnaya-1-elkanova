@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Решение алгоритмической задачи</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav id="movies-navbar">
+    <a href="index.html">Главная</a>
+    <a href="forms.html">Формы</a>
+    <a href="dom.html">DOM</a>
+    <a href="change.html">Изменение</a>
+    <a href="task.html" class="active">Задача</a>
+  </nav>
+  <main>
+    <h1>Решение алгоритмической задачи</h1>
+  
+    <table border="1" cellpadding="10" cellspacing="5">
+    
+      <tr>
+        <td>Условие</td>
+        <td>Можно ли из бревна диаметром D выпилить квадратный брус шириной A?</td>
+      </tr>
+  
+      <tr>
+        <td>Объяснение</td>
+        <td>
+          Из круга диаметра D можно вписать квадрат со стороной A, если диагональ квадрата меньше или равна диаметру круга.<br>
+          Диагональ квадрата равна A × √2, значит условие: <b>A × √2 ≤ D</b>.
+        </td>
+      </tr>
+  
+      <tr>
+        <td>Ввод данных</td>
+        <td>
+          <table border="0" cellpadding="5">
+            <tr>
+              <td>Диаметр бревна D:</td>
+              <td><input type="number" id="D" placeholder="Введите D" min="1" required></td>
+            </tr>
+            <tr>
+              <td>Ширина квадрата A:</td>
+              <td><input type="number" id="A" placeholder="Введите A" min="1" required></td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <button onclick="checkLog()">Проверить</button>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+  
+      <tr>
+        <td>Ответ</td>
+        <td id="result"></td>
+      </tr>
+    </table>
+  </main>
+
+
+
+  <script>
+    function checkLog() {
+      let D = parseFloat(document.getElementById('D').value);
+      let A = parseFloat(document.getElementById('A').value);
+      let result = document.getElementById('result');
+
+      if (isNaN(D) || isNaN(A)) {
+        result.textContent = "Введите оба значения.";
+        return;
+      }
+
+      if (A * Math.sqrt(2) <= D) {
+        result.textContent = "✅ Да, можно выпилить квадратный брус.";
+      } else {
+        result.textContent = "❌ Нет, нельзя выпилить квадратный брус.";
+      }
+    }
+  </script>
+</body>
+</html>

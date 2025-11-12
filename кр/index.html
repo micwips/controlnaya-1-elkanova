@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мир фильмов</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav id="movies-navbar">
+    <a href="index.html" class="active">Главная</a>
+    <a href="forms.html">Формы</a>
+    <a href="dom.html">DOM</a>
+    <a href="change.html">Изменение</a>
+    <a href="task.html">Задача</a>
+
+  </nav>
+ 
+
+  <main>
+
+    <h1>Добро пожаловать!</h1>
+        <p>Здесь оживают истории с большого экрана. Мы помогаем легко находить интересные фильмы, открывать новые жанры и оставаться в курсе свежих релизов.</p>
+
+        <nav id="page1-navbar">
+            <a href="#classics">Классика</a>
+            <a href="#modern">Современные</a>
+            <a href="#actors">Актёры</a>
+            <a href="#table">Таблица фильмов</a>
+            <a href="#quote">Цитата дня</a>
+          </nav>
+
+
+    <section id="classics">
+        <h1>Классические фильмы</h1>
+
+        <br>
+
+        <div class="movies-gallery" style="display: flex; gap: 20px; justify-content: center;">
+          
+          <div class="movie" style="text-align: center;">
+            <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/e26044e5-2d5a-4b38-a133-a776ad93366f/3840x" alt="Побег из Шоушенка" width="150"><br>
+            <strong>Побег из Шоушенка</strong><br>
+            1994<br>
+            Режиссёр: Фрэнк Дарабонт
+          </div>
+      
+          <div class="movie" style="text-align: center;">
+            <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/10703959/ebf237d7-64a3-4b75-98f1-d228d54658e5/600x900" alt="Крёстный Отец" width="150"><br>
+            <strong>Крёстный Отец</strong><br>
+            1972<br>
+            Режиссёр: Фрэнсис Форд Коппола
+          </div>
+      
+          <div class="movie" style="text-align: center;">
+            <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/270cdbf7-4ff7-4b1f-bca0-69950222668f/600x900" alt="Бонни и Клайд" width="150"><br>
+            <strong>Бонни и Клайд</strong><br>
+            1967<br>
+            Режиссёр: Артур Пенн
+          </div>
+      
+        </div>
+    </section> 
+
+    <section id="modern">
+
+            <h1>Современные фильмы</h1>
+          
+            <div class="movie-item" style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Dune_%282021_film%29.jpg/250px-Dune_%282021_film%29.jpg" alt="Dune: Part One" width="60">
+              <div>
+                <strong>Dune: Part One</strong> (2021)<br>
+                Режиссёр: Дени Вильнёв<br>
+                Жанр: фантастика, приключения<br>
+                Краткое описание: Молодой Пол Атрейдес вынужден бороться за выживание на пустынной планете Арракис, где сосредоточено самое ценное вещество во Вселенной.
+              </div>
+            </div>
+          
+            <div class="movie-item" style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrU-3-cJR6TjxHImLbzoWo2ThoTKxXXxXZIg&s" alt="Everything Everywhere All At Once" width="60">
+              <div>
+                <strong>Everything Everywhere All At Once</strong> (2022)<br>
+                Режиссёры: Дэниел Кван, Дэниел Шайнерт<br>
+                Жанр: фантастика, комедия, драма<br>
+                Краткое описание: Простая женщина обнаруживает, что она может перемещаться между множеством альтернативных реальностей, чтобы спасти вселенную и понять смысл своей жизни.
+              </div>
+            </div>
+          
+            <div class="movie-item" style="display: flex; align-items: flex-start; gap: 15px; margin-bottom: 20px;">
+              <img src="https://upload.wikimedia.org/wikipedia/ru/b/bf/%D0%9E%D0%BF%D0%BF%D0%B5%D0%BD%D0%B3%D0%B5%D0%B9%D0%BC%D0%B5%D1%80_%D1%84%D0%B8%D0%BB%D1%8C%D0%BC_%D0%BF%D0%BE%D1%81%D1%82%D0%B5%D1%80.jpg" alt="Oppenheimer" width="60">
+              <div>
+                <strong>Oppenheimer</strong> (2023)<br>
+                Режиссёр: Кристофер Нолан<br>
+                Жанр: историческая драма, биография<br>
+                Краткое описание: История Дж. Роберта Оппенгеймера и разработки атомной бомбы, моральные и личные дилеммы учёного во времена Второй мировой войны.
+              </div>
+            </div>
+
+    </section>
+
+    <section id="actors">
+        <h1>Известные актёры</h1>
+
+        <ol>
+          <li>
+            <strong>Леонардо ДиКаприо</strong><br>
+            Фильмы: «Титаник» (1997), «Начало» (2010)
+          </li>
+          <br>
+          <li>
+            <strong>Мэрил Стрип</strong><br>
+            Фильмы: «Дьявол носит Prada» (2006), «София Коппола» (2017)
+          </li>
+          <br>
+          <li>
+            <strong>Том Хэнкс</strong><br>
+            Фильмы: «Форрест Гамп» (1994), «Изгой» (2000)
+          </li>
+          <br>
+          <li>
+            <strong>Скарлетт Йоханссон</strong><br>
+            Фильмы: «Мстители» (2012), «Брачная история» (2019)
+          </li>
+          <br>
+          <li>
+            <strong>Джонни Депп</strong><br>
+            Фильмы: «Пираты Карибского моря» (2003), «Эдвард Руки-ножницы» (1990)
+          </li>
+        </ol>
+    </section>
+
+    <section id="table">
+
+  <h1>Топ-3 самых известных фильмов</h1>
+
+  <table border="1" cellpadding="10" cellspacing="0">
+    <tr>
+      <th>Название</th>
+      <th>Постер</th>
+      <th>Год выпуска</th>
+      <th>Жанр</th>
+      <th>IMDb</th>
+      <th>Сборы</th>
+    </tr>
+
+    <tr>
+      <td>Titanic</td>
+      <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6F4q5Jfqyfy7aZ41ECA1NJ4CvrdY986Frhw&s" alt="Titanic" width="100"></td>
+      <td>1997</td>
+      <td>Драма, романтика</td>
+      <td><a href="https://www.imdb.com/title/tt0120338/" target="_blank">IMDb</a></td>
+      <td>$2.2 млрд</td>
+    </tr>
+
+    <tr>
+      <td>The Godfather</td>
+      <td><img src="https://avatars.mds.yandex.net/get-kinopoisk-image/10703959/ebf237d7-64a3-4b75-98f1-d228d54658e5/600x900" alt="The Godfather" width="100"></td>
+      <td>1972</td>
+      <td>Драма, криминал</td>
+      <td><a href="https://www.imdb.com/title/tt0068646/" target="_blank">IMDb</a></td>
+      <td>$246–291 млн</td>
+    </tr>
+
+    <tr>
+      <td>Star Wars: Episode IV – A New Hope</td>
+      <td><img src="https://static.wikia.nocookie.net/listofdeaths/images/b/b5/A_New_Hope_poster.jpg/revision/latest?cb=20211105092556" alt="Star Wars: A New Hope" width="100"></td>
+      <td>1977</td>
+      <td>Фантастика, приключения</td>
+      <td><a href="https://www.imdb.com/title/tt0076759/" target="_blank">IMDb</a></td>
+      <td>$775 млн</td>
+    </tr>
+  </table>
+    </section>
+
+
+  <section id="quote">
+  <h1>Цитата дня</h1>
+
+  <div id="quote-box" style="font-style: italic; border: 1px solid #ccc; padding: 10px; width: 60%; margin: 10px auto; text-align: center;">
+  
+  </div>
+
+  <button onclick="newQuote()">Новая цитата</button>
+
+  <script>
+    const quotes = [
+      "«Жизнь — как коробка шоколадных конфет, никогда не знаешь, что внутри.» — Форрест Гамп",
+      "«Я король мира!» — Титаник",
+      "«Сила пробуждается в каждом из нас.» — Star Wars",
+      "«Хорошие люди делают хорошие дела.» — Крёстный Отец",
+      "«Надо верить в свои мечты.» — Побег из Шоушенка"
+    ];
+
+    function newQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote-box').innerText = quotes[randomIndex];
+    }
+
+    newQuote();
+  </script>
+  </section>
+  </main>
+</body>
+</html>

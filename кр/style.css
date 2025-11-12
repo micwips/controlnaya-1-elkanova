@@ -1,0 +1,94 @@
+
+#page1-navbar {
+    background-color: #ffffff;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    display: flex;
+    gap: 15px;
+  }
+  
+  #page1-navbar a {
+    color: #000000;
+    font-size: 0.7rem;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  #page1-navbar a:hover {
+    background-color: #dbdbdb;
+  }
+  
+  #page1-navbar a.active {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+  
+  #page1-navbar a:visited {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  
+
+#movies-navbar {
+    font-weight: bold;
+    background-color: #eee;       /* светлый фон */
+    padding: 10px 20px;
+    display: flex;
+    gap: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(128,128,128,0.5); /* сероватая рамка */
+  }
+  
+  #movies-navbar a {           
+    text-decoration: none;        
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  #movies-navbar a:hover {
+    background-color: #ddd;       /* подсветка при наведении */
+  }
+  
+  #movies-navbar a:visited {
+    color: #333;                  /* даже если ссылка посещена, цвет остаётся */
+  }
+
+  
+  #movies-navbar a.active {
+    background-color: #cccddc;       /* подсветка текущей ссылки */
+    color: #000000;
+  }
+
+  #classics, #modern, #actors, #table, #quote {
+    border: 2px solid rgba(128, 128, 128, 0.5); /* полупрозрачная серая рамка */
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 0.9rem; 
+    background-color: rgba(245, 245, 245, 0.2); /* лёгкий светлый фон */
+  }
+  
+  #classics h1, #modern h1, #actors h1, #table h1 {
+    font-size: 1.3rem; /* чуть меньше заголовков */
+  }
+  
+  #classics ul, #modern ol, #actors ul, #table table {
+    margin-left: 20px;
+    font-size: 0.85rem; /* уменьшенный текст для списков и таблиц */
+  }
+  
+  #table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  #table th, #table td {
+    border: 1px solid #888; /* серая рамка для ячеек */
+    padding: 5px;
+    text-align: center;
+  }
+  
